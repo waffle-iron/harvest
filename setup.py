@@ -24,7 +24,7 @@ setup(
     name="harvest",
     version=harvest.__version__,
     description=("Harvest: the gathering"),
-    long_description=long_description
+    long_description=long_description,
     url="https://github.com/blueoct/harvest",
     author="Blue October",
     author_email="derek.sudduth@gmail.com",
