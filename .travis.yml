@@ -2,10 +2,15 @@ language: python
 python:
     - "3.4"
     - "3.5"
+
 # install dependencies
 install:
     - pip install -r requirements.txt
     - python setup.py install
 
+# command to run tests
+script: nosetests
+
+# send notifications to Blue October builds channel
 notifications:
   slack: blueoctober:bK5ntSOAiT0NfQEw4QUCQJAM
