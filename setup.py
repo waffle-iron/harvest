@@ -10,7 +10,7 @@ setup(
     author_email="derek.sudduth@gmail.com",
 
     description=("Harvest: the gathering"),
-    long_description=open("README").read(),
+    long_description=open("README.md").read(),
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Programming Language :: Python :: 3",
