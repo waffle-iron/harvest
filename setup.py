@@ -12,24 +12,24 @@ class PyTest(TestCommand):
         self.test_suite = True
 
     def run_tests(self):
-        # import here, cause outside the eggs aren't loaded
+        # import here, cause outside the eggs aren"t loaded
         import pytest
         errno = pytest.main(self.test_args)
         sys.exit(errno)
 
-with open('README.rst') as readme:
+with open("README.rst") as readme:
     long_description = readme.read()
 
 setup(
-    name='harvest',
+    name="harvest",
     version=harvest.__version__,
-    description=('Harvest: the gathering'),
+    description=("Harvest: the gathering"),
     long_description=long_description
-    url='https://github.com/blueoct/harvest',
-    author='Blue October',
-    author_email='derek.sudduth@gmail.com',
-    license='GNU General Public License (GPL), Version 3.0',
-    packages=['harvest'],
+    url="https://github.com/blueoct/harvest",
+    author="Blue October",
+    author_email="derek.sudduth@gmail.com",
+    license="GNU General Public License (GPL), Version 3.0",
+    packages=["harvest"],
     classifiers=[
         "Intended Audience :: Developers",
         "License :: General Public License"
@@ -39,9 +39,9 @@ setup(
         "Programming Langueage :: Python :: 3.5",
     ],
     tests_require=[
-        'mock>=1.0.0',
-        'pytest',
-        'pytest-cov',
+        "mock>=1.0.0",
+        "pytest",
+        "pytest-cov",
     ],
-    cmdclass={'test': PyTest}
+    cmdclass={"test": PyTest}
 )
