@@ -2,5 +2,8 @@
 """Main file for harvest"""
 
 
-class TempClass:
-    pass
+def test(something):
+    """Just a dummy function"""
+    my_stuff = something
+
+    return my_stuff
