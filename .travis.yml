@@ -9,7 +9,7 @@ install:
     - python setup.py install
 
 # command to run tests
-script: nosetests
+script: pytest
 
 # send notifications to Blue October builds channel
 notifications:
