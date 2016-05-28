@@ -5,10 +5,9 @@ from harvest import __version__ as version
 setup(
     name="harvest",
     version=version,
-
+    url="http://github.com/blueoct/harvest",
     author="Blue October",
     author_email="derek.sudduth@gmail.com",
-
     description=("Harvest: the gathering"),
     long_description=open("README.md").read(),
     classifiers=[
@@ -17,4 +16,5 @@ setup(
         "Programming Langueage :: Python :: 3.4",
         "Programming Langueage :: Python :: 3.5",
     ],
+    install_requires=["behave",],
 )
