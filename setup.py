@@ -1,48 +1,20 @@
 #!/usr/bin/env python
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
-
-from pypackage import __version__ as version
-
-# Allow trove classifiers in previous python versions
-from sys import version
-if version < '2.2.3':
-    from distutils.dist import DistributionMetadata
-    DistributionMetadata.classifiers = None
-    DistributionMetadata.download_url = None
-
-
-def requireModules(moduleNames=None):
-    import re
-    if moduleNames is None:
-        moduleNames = []
-    else:
-        moduleNames = moduleNames
-
-    commentPattern = re.compile(r'^\w*?#')
-    moduleNames.extend(
-        filter(lambda line: not commentPattern.match(line),
-               open('requirements.txt').readlines()))
-
-    return moduleNames
+from setuptools import setup, find_packages
+from harvest import __version__ as version
 
 setup(
-    name='harvest',
+    name="harvest",
     version=version,
 
-    author='Blue October',
-    author_email='derek.sudduth@gmail.com',
+    author="Blue October",
+    author_email="derek.sudduth@gmail.com",
 
-    description='harvest',
-    long_description=open('README.txt').read(),
+    description=("Harvest: the gathering"),
+    long_description=open("README.md").read(),
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
-        'Intended Audience :: Developers'
+        "Development Status :: 5 - Production/Stable",
+        "Programming Language :: Python :: 3",
+        "Programming Langueage :: Python :: 3.4",
+        "Programming Langueage :: Python :: 3.5",
     ],
-
-    install_requires=requireModules([
-
-    ])
 )
