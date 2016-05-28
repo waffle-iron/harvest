@@ -1,0 +1,7 @@
+feature_path: "./features"
+step_path: "./features/steps"
+environment:
+  name: "AWS"
+  login:
+    username: "cherry"
+    password: "pie"

@@ -16,5 +16,5 @@ setup(
         "Programming Langueage :: Python :: 3.4",
         "Programming Langueage :: Python :: 3.5",
     ],
-    install_requires=["behave",],
+    install_requires=["behave","pyyaml"],
 )

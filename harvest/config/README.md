@@ -1,0 +1,3 @@
+## Configuration folder for harvest
+
+configuration files for Harvest and plugins...
