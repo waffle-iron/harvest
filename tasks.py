@@ -20,7 +20,8 @@ def clean():
     Cleans build artifacts by removing temp directories and files.
 
     """
-    build_dirs = ['./harvest/__pycache__',
+    build_dirs = ['./.cache',
+                  './harvest/__pycache__',
                   './harvest.egg-info',
                   './dist',
                   './build',
