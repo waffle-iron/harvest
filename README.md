@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/blueoct/harvest.svg?branch=master)](https://travis-ci.org/blueoct/harvest)
+
 # Harvest
 
 Automation Done Right.  Harvest gathers all the tooling you need to create, test, and deploy your code.
