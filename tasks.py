@@ -36,9 +36,10 @@ def clean():
 def build():
     """Builds a pip package (wheel) for mason.
 
-    Executes ``python setup.py bdist_wheel`` command which generates a python
-    wheel file.  If running on an OS other than Windows, ``python3`` will be
-    called instead.
+    Executes ``python3 setup.py sdist bdist_wheel`` command which generates
+    a python wheel file.
+
+    NOTE: This is for Unix/Linux systems only
 
     """
     run('python3 setup.py sdist bdist_wheel')
