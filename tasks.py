@@ -20,8 +20,8 @@ def clean():
     Cleans build artifacts by removing temp directories and files.
 
     """
-    build_dirs = ['./mason/__pycache__',
-                  './mason.egg-info',
+    build_dirs = ['./harvest/__pycache__',
+                  './harvest.egg-info',
                   './dist',
                   './build',
                   './__pycache__']
