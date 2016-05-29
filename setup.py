@@ -29,7 +29,6 @@ setup(
     author="Blue October",
     author_email="derek.sudduth@gmail.com",
     license="GNU General Public License (GPL), Version 3.0",
-    packages=["harvest"],
     classifiers=[
         "Intended Audience :: Developers",
         "License :: General Public License"
