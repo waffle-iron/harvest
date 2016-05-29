@@ -15,8 +15,8 @@ Testing
 =======
 .. image:: https://travis-ci.org/blueoct/harvest.svg?branch=master
     :target: https://travis-ci.org/blueoct/harvest
-.. image:: https://codecov.io/gh/blueoct/harvest/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/blueoct/harvest
+.. image:: https://codecov.io/gh/blueoct/harvest/branch/master/graph/badge.svg?branch=master
+    :target: https://codecov.io/gh/blueoct/harvest?branch=master
 
 Builds and test execution are handled by Travis CI.
 
