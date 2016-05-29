@@ -14,15 +14,15 @@ Harvest is all about productive coding - achieved by being highly automatable by
 Testing
 =======
 .. image:: https://travis-ci.org/blueoct/harvest.svg?branch=master
-    :target: https://travis-ci.org/blueoct/harvest
+  :target: https://travis-ci.org/blueoct/harvest
 
 .. image:: https://codecov.io/gh/blueoct/harvest/branch/master/graph/badge.svg?branch=master
-    :target: https://codecov.io/gh/blueoct/harvest?branch=master
+  :target: https://codecov.io/gh/blueoct/harvest?branch=master
 
 Builds and test execution are handled by Travis CI.
 
 The following can be executed to build and test locally::
 
-    pip install -e .
-    pip install -r dev_requirements.txt
-    py.test
+  pip install -e .
+  pip install -r dev_requirements.txt
+  py.test
