@@ -1,48 +1,47 @@
 #!/usr/bin/env python
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
-
-from pypackage import __version__ as version
-
-# Allow trove classifiers in previous python versions
-from sys import version
-if version < '2.2.3':
-    from distutils.dist import DistributionMetadata
-    DistributionMetadata.classifiers = None
-    DistributionMetadata.download_url = None
+from setuptools import setup
+from setuptools.command.test import test as TestCommand
+import harvest
+import sys
 
 
-def requireModules(moduleNames=None):
-    import re
-    if moduleNames is None:
-        moduleNames = []
-    else:
-        moduleNames = moduleNames
+class PyTest(TestCommand):
+    def finalize_options(self):
+        TestCommand.finalize_options(self)
+        self.test_args = []
+        self.test_suite = True
 
-    commentPattern = re.compile(r'^\w*?#')
-    moduleNames.extend(
-        filter(lambda line: not commentPattern.match(line),
-               open('requirements.txt').readlines()))
+    def run_tests(self):
+        # import here, cause outside the eggs aren"t loaded
+        import pytest
+        errno = pytest.main(self.test_args)
+        sys.exit(errno)
 
-    return moduleNames
+with open("README.rst") as readme:
+    long_description = readme.read()
 
 setup(
-    name='harvest',
-    version=version,
-
-    author='Blue October',
-    author_email='derek.sudduth@gmail.com',
-
-    description='harvest',
-    long_description=open('README.txt').read(),
+    name="harvest",
+    version=harvest.__version__,
+    description=("Harvest: the gathering"),
+    long_description=long_description,
+    url="https://github.com/blueoct/harvest",
+    author="Blue October",
+    author_email="derek.sudduth@gmail.com",
+    license="GNU General Public License (GPL), Version 3.0",
+    packages=["harvest"],
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
-        'Intended Audience :: Developers'
+        "Intended Audience :: Developers",
+        "License :: General Public License"
+        "Development Status :: 5 - Production/Stable",
+        "Programming Language :: Python :: 3",
+        "Programming Langueage :: Python :: 3.4",
+        "Programming Langueage :: Python :: 3.5",
     ],
-
-    install_requires=requireModules([
-
-    ])
+    tests_require=[
+        "mock>=1.0.0",
+        "pytest",
+        "pytest-cov",
+    ],
+    cmdclass={"test": PyTest}
 )
