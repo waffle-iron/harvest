@@ -1,8 +1,15 @@
+sudo: required
 language: python
-python:
-    - "3.4"
-    - "3.5"
-# install dependencies
+matrix:
+    include:
+        - python: 3.5
+        - python: 3.4
+before_install:
+    - pip install codecov
 install:
     - pip install -r requirements.txt
-    - python setup.py install
+    - pip install -e .
+script: sleep 10 && py.test -v
+after_success: codecov
+notifications:
+  slack: blueoctober:bK5ntSOAiT0NfQEw4QUCQJAM
