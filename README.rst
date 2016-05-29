@@ -1,3 +1,6 @@
+.. image:: https://badge.waffle.io/blueoct/harvest.png?label=ready&title=Ready 
+ :target: https://waffle.io/blueoct/harvest
+ :alt: 'Stories in Ready'
 =======
 Harvest
 =======
