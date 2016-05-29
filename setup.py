@@ -38,6 +38,8 @@ setup(
         "Programming Langueage :: Python :: 3.4",
         "Programming Langueage :: Python :: 3.5",
     ],
+    install_requires=["logstash_formatter"],
+    packages=find_packages(),
     tests_require=[
         "mock>=1.0.0",
         "pytest",
